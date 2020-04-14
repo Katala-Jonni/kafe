@@ -1,48 +1,163 @@
-<nav class="blue">
-    <div class="nav-wrapper">
-        <a href="/" class="brand-logo">Магазин курсов</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            {{#if isHome}}
-                <li class="active"><a href="/">Главная страница</a></li>
-            {{else}}
-                <li><a href="/">Главная страница</a></li>
-            {{/if}}
-            {{#if isCourses}}
-                <li class="active"><a href="/courses">Курсы</a></li>
-            {{else}}
-                <li><a href="/courses">Курсы</a></li>
-            {{/if}}
-
-            {{#if isAuth}}
-                {{#if isAdd}}
-                    <li class="active"><a href="/add">Добавить курс</a></li>
-                {{else}}
-                    <li><a href="/add">Добавить курс</a></li>
-                {{/if}}
-
-                {{#if isCard}}
-                    <li class="active"><a href="/card">Корзина</a></li>
-                {{else}}
-                    <li><a href="/card">Корзина</a></li>
-                {{/if}}
-                {{#if isOrder}}
-                    <li class="active"><a href="/orders">Заказы</a></li>
-                {{else}}
-                    <li><a href="/orders">Заказы</a></li>
-                {{/if}}
-                {{#if Profile}}
-                    <li class="active"><a href="/profile">Профиль</a></li>
-                {{else}}
-                    <li><a href="/profile">Профиль</a></li>
-                {{/if}}
-                <li><a href="/auth/logout">Выйти</a></li>
-            {{else}}
-                {{#if isLogin}}
-                    <li class="active"><a href="/auth/login#login">Войти</a></li>
-                {{else}}
-                    <li><a href="/auth/login#login">Войти</a></li>
-                {{/if}}
-            {{/if}}
-        </ul>
+<!-- header start -->
+{{#if isHeaderAbsolute}}
+    <header>
+{{else}}
+    <header class="header-home">
+{{/if}}
+    <!--<header class="header-home">-->
+    <!-- header-top-area start -->
+    <div class="header-top-area hidden-xs">
+        <div class="container">
+            <div class="row">
+                <!-- header-top-left start -->
+                <div class="col-lg-6 col-md-6 col-sm-7">
+                    <div class="header-top-left">
+                        <!--                        <div class="top-message">Default welcome message</div>-->
+                        <div class="phone-number"> Звоните: <span>28-50-28</span><a
+                                href="tel:+79212285028">Позвонить</a></div>
+                    </div>
+                </div>
+                <!-- header-top-left end -->
+                <!-- header-top-right start -->
+                <div class="col-lg-6 col-md-6 col-sm-5">
+                    <div class="header-top-right">
+                        <div class="lang-select">
+                            <ul>
+                                <li><a href="#"><img src="img/en.png" alt=""/></a></li>
+                            </ul>
+                        </div>
+                        <div class="top-menu">
+                            <ul>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">My Wishlist</a></li>
+                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- header-top-right end -->
+            </div>
+        </div>
     </div>
-</nav>
+    <!-- header-top-area end -->
+    <!-- header-mid-area start -->
+    <div class="header-mid-area">
+        <div class="container">
+            <div class="row">
+                <!-- logo start -->
+                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+                    <div class="logo">
+                        <a href="/"><img src="img/logo/logo.png" alt=""/></a>
+                    </div>
+                </div>
+                <!-- logo end -->
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                    <!-- cart-total start -->
+                    <div class="cart-total">
+                        <ul>
+                            <li><a href="/cart"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span>
+                                <span class="cart-no">Корзина(2)</span></a>
+                                <div class="mini-cart-content">
+                                    <div class="cart-img-details">
+                                        <div class="cart-img-photo">
+                                            <a href="#"><img src="img/product/total-cart.jpg" alt=""/></a>
+                                            <span class="quantity">1</span>
+                                        </div>
+                                        <div class="cart-img-contaent">
+                                            <a href="#"><p>Vestibulum suscipit</p></a>
+                                            <span>£165.00</span>
+                                        </div>
+                                        <div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="cart-img-details">
+                                        <div class="cart-img-photo">
+                                            <a href="#"><img src="img/product/total-cart2.jpg" alt=""/></a>
+                                            <span class="quantity">1</span>
+                                        </div>
+                                        <div class="cart-img-contaent">
+                                            <a href="#"><p>Donec sodales mauris in</p></a>
+                                            <span>£50.00</span>
+                                        </div>
+                                        <div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="cart-inner-bottom">
+                                        <p class="total">Subtotal: <span class="amount">£215.00</span></p>
+                                        <div class="clear"></div>
+                                        <p class="cart-button-top"><a href="/checkout">Оформить</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cart-total end -->
+                    <!-- header-search start -->
+                    <div class="header-search">
+                        <form action="#">
+                            <input type="text" placeholder="Search product..."/>
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <!-- header-search end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-mid-area end -->
+    <!-- mainmenu-area start -->
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="mainmenu">
+                        <nav>
+                            <ul>
+                                <!--                                <li><a href="/">Главная</a></li>-->
+                                <li><a href="/about-us">О кафе</a></li>
+                                <li><a href="/delivery">Доставка </a></li>
+                                <li><a href="/banquet">Банкеты </a></li>
+                                <li><a href="#">Контакты</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/booking">Забронировать столик </a></li>
+                                        <li><a href="/contact">Как нас найти </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mainmenu-area end -->
+    <!-- mobile-menu-area start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul>
+                                <!--                                <li><a href="/">Главная</a></li>-->
+                                <li><a href="/about-us">О кафе</a></li>
+                                <li><a href="/delivery">Доставка </a></li>
+                                <li><a href="/banquet">Банкеты </a></li>
+                                <li><a href="#">Контакты</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/booking">Забронировать столик </a></li>
+                                        <li><a href="/contact">Как нас найти </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile-menu-area end -->
+</header>
+    <!-- header end -->

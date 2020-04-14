@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
         .status(200)
         .render('index', {
             title: 'Главная странца',
-            isHome: true,
+            isHome: true
         });
 });
 

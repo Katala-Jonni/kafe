@@ -12,6 +12,13 @@ const mongoose = require('mongoose');
 const csrf = require('csurf');
 const exphbs = require('express-handlebars');
 const homeRoutes = require('./routes/home');
+const contactRoutes = require('./routes/contact');
+const aboutRoutes = require('./routes/about');
+const banquetRoutes = require('./routes/banquet');
+const deliveryRoutes = require('./routes/delivery');
+const bookingRoutes = require('./routes/booking');
+const cartRoutes = require('./routes/cart');
+const checkoutRoutes = require('./routes/checkout');
 const addRoutes = require('./routes/add');
 const coursesRoutes = require('./routes/courses');
 const cardRoutes = require('./routes/card');
@@ -28,14 +35,14 @@ const hbsHelpers = require('./utils/hbs-helpers');
 const app = express();
 const store = new MongoDBStore({
     uri: keys.MONGODB_URI,
-    collection: 'sessions',
+    collection: 'sessions'
 });
 
 // создание hbs
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs',
-    helpers: hbsHelpers,
+    helpers: hbsHelpers
 });
 
 // регистрируем в express движок handlebarse
@@ -54,7 +61,7 @@ app.use(session({
     secret: keys.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store,
+    store
 }));
 app.use(fileMiddleware.single('avatar'));
 app.use(csrf());
@@ -69,6 +76,13 @@ app.use(userMiddleware);
 
 // Настроили роуты в отдельных файлах
 app.use('/', homeRoutes);
+app.use('/contact', contactRoutes);
+app.use('/about-us', aboutRoutes);
+app.use('/banquet', banquetRoutes);
+app.use('/delivery', deliveryRoutes);
+app.use('/booking', bookingRoutes);
+app.use('/cart', cartRoutes);
+app.use('/checkout', checkoutRoutes);
 app.use('/add', addRoutes);
 app.use('/courses', coursesRoutes);
 app.use('/card', cardRoutes);
@@ -82,7 +96,7 @@ const PORT = process.env.PORT || 3000;
 const start = async () => {
     try {
         await mongoose.connect(keys.MONGODB_URI, {
-            useNewUrlParser: true, useUnifiedTopology: true,
+            useNewUrlParser: true, useUnifiedTopology: true
         });
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
