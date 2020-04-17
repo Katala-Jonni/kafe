@@ -147,6 +147,19 @@ body {
     width: 1200px
 }
 
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clclip-pathip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
+
 /* =========================
 2. header
 ============================*/
@@ -328,7 +341,7 @@ header {
     font-weight: bold;
     height: 34px;
     line-height: 34px;
-    padding: 0 15px;
+    padding: 0 11px;
     text-transform: uppercase;
 }
 
@@ -340,7 +353,7 @@ header {
     height: 34px;
     line-height: 34px;
     text-align: center;
-    width: 50px;
+    width: 38px;
 }
 
 .cart-total ul li a span.cart-no {
@@ -527,6 +540,7 @@ p.cart-button-top {
     font-weight: 700;
     padding: 20px 0;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .mainmenu ul li:hover a {
@@ -849,6 +863,16 @@ p.cart-button-top {
     padding: 8px 32px;
     text-transform: uppercase;
     border: 2px solid #fff;
+}
+
+.add-to-cart .btn-add {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 32px;
+    text-transform: uppercase;
+    /*border: 2px solid #fff;*/
 }
 
 .add-to-links {
@@ -1306,6 +1330,16 @@ ul.product-nav li:last-child::before {
 }
 
 .footer-widget {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-widget-logo {
+    align-self: center;
+}
+
+.footer-widget-logo a {
+    cursor: pointer;
 }
 
 .footer-widget h3 {
@@ -1332,14 +1366,33 @@ ul.footer-menu li a {
     font-weight: 400;
     line-height: 40px;
     border-bottom: 1px solid #5b5b5b;
+    cursor: pointer;
+}
+
+ul.footer-menu-logo li a {
+    color: #d5d5d5;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 40px;
+    border-bottom: 1px solid #5b5b5b;
+    cursor: pointer;
 }
 
 ul.footer-menu li:last-child a {
     padding-bottom: 0;
 }
 
+ul.footer-menu-logo li:last-child a {
+    padding-bottom: 0;
+}
+
+ul.footer-menu-logo li a:hover {
+    color: #EB3B60;
+}
+
 ul.footer-menu li a:hover {
-    color: #EB3B60
+    color: #EB3B60;
 }
 
 ul.footer-menu li a::before {
@@ -2361,6 +2414,9 @@ ul.sidebar-menu li a:hover {
 .toolbar {
     margin-bottom: 30px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .view-mode {
@@ -4306,3 +4362,85 @@ p.checkout-coupon input[type=submit] {
 .mobile-menu {
     display: none;
 }
+
+@keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+@-webkit-keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        transform: scale(1.2);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+
+.btn-phone {
+    background: #EC4445;
+    color: #ffffff;
+    display: inline-block;
+    /*font-size: 18px;*/
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    /*animation: shake .5s infinite ease;*/
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-phone-icon {
+    padding: 13px 17px;
+}
+
+.btn-phone:hover {
+    /*font-size: 25px;*/
+    color: #ffffff;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+
+/*.shake {*/
+/*    -webkit-animation-name: shake;*/
+/*    animation-name: shake;*/
+/*}*/

@@ -7,4 +7,7 @@ module.exports = {
         }
         return options.inverse(this);
     },
+    multiply(a, b, options) {
+        return a * b;
+    }
 };

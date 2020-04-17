@@ -1,1 +1,26 @@
-[{"title":"React","price":"13000","img":"https://hsto.org/webt/bf/6m/q3/bf6mq3wmejwlzxaiuiseo0idri0.png","id":"64f3cd36-5568-4a10-8740-370a9d8cc703"},{"title":"Javascript","price":"21000","img":"https://img2.freepng.ru/20180527/oio/kisspng-javascript-programming-language-ajax-5b0b285b692210.3071468515274578834306.jpg","id":"2c1a48e3-3869-4cab-909e-f522ec012d5b"},{"title":"Node JS","price":"19000","img":"https://kbasystems.com/assets/img/w-4.png","id":"e092a1b3-3614-43cb-9a16-8e879606ef27"},{"title":"Python","price":"10000","img":"https://steamuserimages-a.akamaihd.net/ugc/946219835806282284/D1179AA95880DECCFFA1DADF06C4084941FF94F4/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true","id":"6af92374-bd97-40b4-9f4b-aa5d231aeeee"}]
+[
+  {
+    "title": "React",
+    "price": "13000",
+    "img": "https://hsto.org/webt/bf/6m/q3/bf6mq3wmejwlzxaiuiseo0idri0.png",
+    "id": "64f3cd36-5568-4a10-8740-370a9d8cc703"
+  },
+  {
+    "title": "Javascript",
+    "price": "21000",
+    "img": "https://img2.freepng.ru/20180527/oio/kisspng-javascript-programming-language-ajax-5b0b285b692210.3071468515274578834306.jpg",
+    "id": "2c1a48e3-3869-4cab-909e-f522ec012d5b"
+  },
+  {
+    "title": "Node JS",
+    "price": "19000",
+    "img": "https://kbasystems.com/assets/img/w-4.png",
+    "id": "e092a1b3-3614-43cb-9a16-8e879606ef27"
+  },
+  {
+    "title": "Python",
+    "price": "10000",
+    "img": "https://steamuserimages-a.akamaihd.net/ugc/946219835806282284/D1179AA95880DECCFFA1DADF06C4084941FF94F4/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    "id": "6af92374-bd97-40b4-9f4b-aa5d231aeeee"
+  }
+]

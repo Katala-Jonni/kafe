@@ -19,6 +19,7 @@ const deliveryRoutes = require('./routes/delivery');
 const bookingRoutes = require('./routes/booking');
 const cartRoutes = require('./routes/cart');
 const checkoutRoutes = require('./routes/checkout');
+const shopRoutes = require('./routes/shop');
 const addRoutes = require('./routes/add');
 const coursesRoutes = require('./routes/courses');
 const cardRoutes = require('./routes/card');
@@ -56,6 +57,7 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // настраиваем сессию
 app.use(session({
     secret: keys.SESSION_SECRET,
@@ -64,7 +66,7 @@ app.use(session({
     store
 }));
 app.use(fileMiddleware.single('avatar'));
-app.use(csrf());
+// app.use(csrf());
 app.use(flash());
 // защита приложения заголовки в ответе добавляются
 app.use(helmet());
@@ -83,6 +85,7 @@ app.use('/delivery', deliveryRoutes);
 app.use('/booking', bookingRoutes);
 app.use('/cart', cartRoutes);
 app.use('/checkout', checkoutRoutes);
+app.use('/shop', shopRoutes);
 app.use('/add', addRoutes);
 app.use('/courses', coursesRoutes);
 app.use('/card', cardRoutes);

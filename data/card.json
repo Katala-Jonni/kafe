@@ -1,1 +1,140 @@
-{"courses":[{"title":"Javascript","price":"21000","img":"https://img2.freepng.ru/20180527/oio/kisspng-javascript-programming-language-ajax-5b0b285b692210.3071468515274578834306.jpg","id":"2c1a48e3-3869-4cab-909e-f522ec012d5b","count":1},{"title":"Python","price":"10000","img":"https://steamuserimages-a.akamaihd.net/ugc/946219835806282284/D1179AA95880DECCFFA1DADF06C4084941FF94F4/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true","id":"6af92374-bd97-40b4-9f4b-aa5d231aeeee","count":1}],"price":31000}
+{
+  "courses": [
+    {
+      "title": "Javascript",
+      "price": "21000",
+      "img": "https://img2.freepng.ru/20180527/oio/kisspng-javascript-programming-language-ajax-5b0b285b692210.3071468515274578834306.jpg",
+      "id": "2c1a48e3-3869-4cab-909e-f522ec012d5b",
+      "count": 1
+    },
+    {
+      "title": "Python",
+      "price": "10000",
+      "img": "https://steamuserimages-a.akamaihd.net/ugc/946219835806282284/D1179AA95880DECCFFA1DADF06C4084941FF94F4/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+      "id": "6af92374-bd97-40b4-9f4b-aa5d231aeeee",
+      "count": 1
+    },
+    {
+      "$__": {
+        "strictMode": true,
+        "selected": {},
+        "getters": {},
+        "_id": "5e96709c8e48b18a7222d06f",
+        "wasPopulated": false,
+        "activePaths": {
+          "paths": {
+            "weight": "init",
+            "structure": "init",
+            "description": "init",
+            "categoryId": "init",
+            "isSale": "init",
+            "active": "init",
+            "price": "init",
+            "name": "init",
+            "oldPrice": "init",
+            "img": "init",
+            "countPopular": "init",
+            "_id": "init",
+            "tags": "init",
+            "__v": "init"
+          },
+          "states": {
+            "ignore": {},
+            "default": {},
+            "init": {
+              "_id": true,
+              "price": true,
+              "oldPrice": true,
+              "active": true,
+              "isSale": true,
+              "img": true,
+              "countPopular": true,
+              "name": true,
+              "categoryId": true,
+              "description": true,
+              "structure": true,
+              "weight": true,
+              "tags": true,
+              "__v": true
+            },
+            "modify": {},
+            "require": {}
+          },
+          "stateNames": [
+            "require",
+            "modify",
+            "init",
+            "default",
+            "ignore"
+          ]
+        },
+        "pathsToScopes": {},
+        "cachedRequired": {},
+        "$setCalled": {},
+        "emitter": {
+          "_events": {},
+          "_eventsCount": 0,
+          "_maxListeners": 0
+        },
+        "$options": {
+          "skipId": true,
+          "isNew": false,
+          "willInit": true
+        }
+      },
+      "isNew": false,
+      "_doc": {
+        "price": 158,
+        "oldPrice": 0,
+        "active": true,
+        "isSale": false,
+        "img": [],
+        "countPopular": 0,
+        "_id": "5e96709c8e48b18a7222d06f",
+        "name": "карбонара",
+        "categoryId": "5e9643fa35f6207e6f471d78",
+        "description": "lorem ipsum dolor sit amet, consectetur adipisicing elit. atque ducimus minima nobis numquam quibusdam quisquam.",
+        "structure": "Сливки, Макароны",
+        "weight": "250",
+        "tags": [],
+        "__v": 0
+      },
+      "$locals": {},
+      "$init": true,
+      "count": 7
+    },
+    {
+      "price": 158,
+      "oldPrice": 0,
+      "active": true,
+      "isSale": false,
+      "img": [],
+      "countPopular": 0,
+      "_id": "5e96709c8e48b18a7222d06f",
+      "name": "карбонара",
+      "categoryId": "5e9643fa35f6207e6f471d78",
+      "description": "lorem ipsum dolor sit amet, consectetur adipisicing elit. atque ducimus minima nobis numquam quibusdam quisquam.",
+      "structure": "Сливки, Макароны",
+      "weight": "250",
+      "tags": [],
+      "__v": 0
+    },
+    {
+      "price": 158,
+      "oldPrice": 0,
+      "active": true,
+      "isSale": false,
+      "img": [],
+      "countPopular": 0,
+      "_id": "5e96709c8e48b18a7222d06f",
+      "name": "карбонара",
+      "categoryId": "5e9643fa35f6207e6f471d78",
+      "description": "lorem ipsum dolor sit amet, consectetur adipisicing elit. atque ducimus minima nobis numquam quibusdam quisquam.",
+      "structure": "Сливки, Макароны",
+      "weight": "250",
+      "tags": [],
+      "__v": 0
+    }
+  ],
+  "price": 316
+}
